@@ -7,6 +7,7 @@ bl_info = {
     "category": "3D",
     "location": "",
     }
+
 import importlib
 from pathlib import Path
 
