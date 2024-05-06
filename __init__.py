@@ -1,5 +1,5 @@
 bl_info = {
-    "version": (1, 6, 0),
+    "version": (1, 6, 1),
     "blender": (3, 6, 5),
     "name": "KSYN File Back Up",
     "author": "Jonathan Stroem, KSYN",
@@ -27,8 +27,6 @@ from bpy.props import (
                         StringProperty,
                         IntProperty,
                         )
-
-
 
 
 
