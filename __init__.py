@@ -101,8 +101,10 @@ class KSYNfilebackupddonPreferences(AddonPreferences):
     def draw(self, context):
         layout = self.layout
         addon_prefs = context.preferences.addons[__name__].preferences
-        layout.prop(addon_prefs, "move_file_location", text=get_translang("Move file location","場所を変える"))
-        layout.prop(addon_prefs, "filepath", text=get_translang("File location","ファイルの場所"))
+        layout.prop(addon_prefs, "move_file_location", text=get_translang("Change location (in .blend in Blender file by default)",
+                                                                          "場所を変える(デフォルトではBlenderファイルの.blendの中)"))
+        if addon_prefs.move_file_location:
+            layout.prop(addon_prefs, "filepath", text=get_translang("File location","ファイルの場所"))
         layout.prop(addon_prefs, "back_up_blenderfile")
         layout.prop(addon_prefs, "back_up_script")
 
