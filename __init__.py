@@ -29,8 +29,6 @@ from bpy.props import (
                         IntProperty,
                         )
 
-
-
 class ReloadUnityModuluse():
     # リロードモジュール　開始
     def get_all_py_files(self, directory):
@@ -211,7 +209,7 @@ def backup_blenderfile():
 
         name_ex_file_bk = file["time"] + file["name"] + file["extension"]
 
-        print("#1 back up file is ", os.path.join(file["backup_directory"], name_ex_file_bk))
+        print("#1 Back up file is ", os.path.join(file["backup_directory"], name_ex_file_bk))
         os.rename(os.path.join(backup_directory_path, file["name"] + file["extension"] + "1"),
                 os.path.join(backup_directory_path, name_ex_file_bk))
 
@@ -220,7 +218,7 @@ def backup_blenderfile():
             shutil.move(file["fullpath"] + "1",
                         os.path.join(file["backup_directory"], file["name"] + ".blend1"))
 
-        print("back up move .blend1 file3")
+        print("Back up move .blend1 file")
 
 @persistent
 def move_handler(dummy):
